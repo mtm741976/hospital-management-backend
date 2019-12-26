@@ -17,7 +17,9 @@ public class Doctor {
 	private int age;
 	private Date created_at;
 	
-	public Doctor() {}
+	public Doctor() {
+		this.created_at = new Date();
+	}
 	
 	private Doctor(String id, String fullName, String imgUrl, String specialty, String desc, int age) {
 		this.id = id;
