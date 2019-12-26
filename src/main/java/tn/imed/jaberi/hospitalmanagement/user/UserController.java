@@ -18,7 +18,7 @@ import tn.imed.jaberi.hospitalmanagement.security.TokenUtil;
 public class UserController {
 
     @Autowired
-    private TokenUtil tokenUtil;.
+    private TokenUtil tokenUtil;
 
     @Autowired
     private UserService userService;
