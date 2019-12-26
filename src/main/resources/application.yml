@@ -1,1 +1,15 @@
+# =====================================
+# ========== Server Port .. ===========           
+# =====================================
+server:
+  port: 8080
 
+
+# =====================================
+# ========== Data Source .. ===========           
+# =====================================
+spring:
+  data:
+    mongodb: 
+      # formel : "mongodb://<username>:<password>@<host>:<port>/<dbname>?<options&settings>"
+      uri: "mongodb://3imed-jaberi:3imed-jaberi@ds149122.mlab.com:49122/hospital-management-db?retryWrites=false"  
