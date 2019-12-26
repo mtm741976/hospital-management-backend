@@ -19,6 +19,7 @@ public class Room {
   
   public Room(String title) {
 	  this.title = title;
+    this.created_at = new Date();
   }
 
   public String getId() {
