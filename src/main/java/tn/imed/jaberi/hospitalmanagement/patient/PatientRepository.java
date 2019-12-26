@@ -1,5 +1,8 @@
 package tn.imed.jaberi.hospitalmanagement.patient;
 
-public interface PatientRepository {
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface PatientRepository extends MongoRepository<Patient, String> {
 
 }

@@ -16,7 +16,9 @@ public class Patient {
 	private int age;
 	private Date created_at;
 	
-	public Patient() {}
+	public Patient() {
+		this.created_at = new Date(System.currentTimeMillis());
+	}
 	
 	private Patient(String id, String firstName, String lastName, String malady, int age) {
 		this.id = id;
