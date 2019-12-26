@@ -10,17 +10,18 @@ public class Bed {
 
 	@Id
 	private String id;
-  	private String imgUrl;
-  	private String desc;
+  private String imgUrl;
+	private String desc;
 	private Date created_at;
 	
-	public Bed() {}
+	public Bed() {
+		this.created_at = new Date(System.currentTimeMillis());
+	}
 	
-	private Bed(String id, String imgUrl, String desc) {
-		this.id = id;
+	private Bed(String imgUrl, String desc) {
 		this.imgUrl = imgUrl;
 		this.desc = desc;
-		this.created_at = new Date();
+		this.created_at = new Date(System.currentTimeMillis());
 	}
 
 	public String getId() {
