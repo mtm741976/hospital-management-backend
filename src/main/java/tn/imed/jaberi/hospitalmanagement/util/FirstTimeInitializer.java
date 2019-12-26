@@ -1,4 +1,4 @@
-package tn.imed.jaberi.hospitalmanagement.security;
+package tn.imed.jaberi.hospitalmanagement.util;
 
 import org.apache.juli.logging.Log;
 import org.apache.juli.logging.LogFactory;
@@ -24,6 +24,7 @@ public class FirstTimeInitializer implements CommandLineRunner {
 	public void run(String... args) throws Exception { // awel mal container yruni
 		// check if we have users .. 
 		// if no user exist, create one ..
+		System.out.println(userService.findAll());
 		if(userService.findAll().isEmpty()) {
 			logger.info("No Users accounts found. Creating some users !");
 			
