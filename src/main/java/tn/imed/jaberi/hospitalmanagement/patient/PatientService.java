@@ -1,5 +1,12 @@
 package tn.imed.jaberi.hospitalmanagement.patient;
 
+import java.util.List;
+import java.util.NoSuchElementException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
 public class PatientService {
 
   @Autowired
