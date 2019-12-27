@@ -17,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class User implements UserDetails {
 	
 	@Id
-	private String Id;
+	private String id;
 	
     @NotEmpty
     private String email;
@@ -26,7 +26,7 @@ public class User implements UserDetails {
     private String name;
 
     @NotEmpty
-    @JsonIgnore // ignore from response of user .. 
+    // @JsonIgnore // ignore from response of user .. 
     private String password;
 
     private Date created_at;
@@ -34,7 +34,16 @@ public class User implements UserDetails {
     
 	public User() {}
     
+	// JUST FOR THE UTIL METHOD .. 
     public User(@NotEmpty String email, @NotEmpty String password, @NotEmpty String name) {
+        this.email = email;
+        this.password = password;
+        this.name = name;
+        this.created_at = new Date();
+    }
+    
+    public User(String id, @NotEmpty String email, @NotEmpty String password, @NotEmpty String name) {
+		this.id = id;
         this.email = email;
         this.password = password;
         this.name = name;
@@ -65,11 +74,11 @@ public class User implements UserDetails {
 	}
 
 	public String getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(String id) {
-		Id = id;
+		this.id = id;
 	}
 
 	public String getEmail() {
