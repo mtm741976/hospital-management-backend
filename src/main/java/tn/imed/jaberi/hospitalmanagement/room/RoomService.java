@@ -28,13 +28,13 @@ public class RoomService {
   }
     
 
-  public Room save(Room Room) {
-    return roomRepository.insert(Room);
+  public Room save(Room room) {
+    return roomRepository.insert(room);
   }
   
   
-  public Room update(Room Room) {
-	  return roomRepository.save(Room);
+  public Room update(Room room) {
+	  return roomRepository.save(room);
   }
     
   public void delete(String id) {
