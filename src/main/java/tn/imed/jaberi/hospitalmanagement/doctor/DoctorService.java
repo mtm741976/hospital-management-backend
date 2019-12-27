@@ -28,13 +28,13 @@ public class DoctorService {
   }
     
 
-  public Doctor save(Doctor Doctor) {
-    return doctorRepository.insert(Doctor);
+  public Doctor save(Doctor doctor) {
+    return doctorRepository.insert(doctor);
   }
   
   
-  public Doctor update(Doctor Doctor) {
-	  return doctorRepository.save(Doctor);
+  public Doctor update(Doctor doctor) {
+	  return doctorRepository.save(doctor);
   }
     
   public void delete(String id) {
