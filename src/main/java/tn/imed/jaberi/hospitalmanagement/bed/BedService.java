@@ -35,8 +35,7 @@ public class BedService {
   
   
   public Bed update(Bed bed) {
-	return bedRepository.save(bed);
-	  
+	  return bedRepository.save(bed); 
   }
     
   public void delete(String id) {
