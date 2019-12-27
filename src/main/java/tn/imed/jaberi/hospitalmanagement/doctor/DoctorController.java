@@ -42,8 +42,8 @@ public class DoctorController {
   }
   
   @PostMapping(value = {"", "/"})
-  public ResponseEntity<Doctor> createNewDoctor(@Valid @RequestBody Doctor Doctor) {
-    Doctor result = doctorService.save(Doctor);
+  public ResponseEntity<Doctor> createNewDoctor(@Valid @RequestBody Doctor doctor) {
+    Doctor result = doctorService.save(doctor);
     
     return new ResponseEntity<>(result, HttpStatus.CREATED);
   }
