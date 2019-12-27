@@ -40,9 +40,9 @@ public class UserService implements UserDetailsService {
 	}
 
 	
-	public void save(User user) {
+	public User save(User user) {
 		user.setPassword(passwordEncoder().encode(user.getPassword())); 
-		this.userRepository.save(user);
+		return userRepository.save(user);
 	}
 	
 	public List<User> findAll() {

@@ -1,6 +1,10 @@
 package tn.imed.jaberi.hospitalmanagement.user;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -26,7 +30,7 @@ public class UserController {
     @Autowired
     private AuthenticationManager authenticationManager; 
     
-    @PostMapping({"", "/"})
+    @PostMapping({"", "/", "/login", "/login/"})
 	public JwtResponse signIn(@RequestBody SignInRequest signInRequest) {
 		final Authentication authentication = authenticationManager.authenticate(
 				new UsernamePasswordAuthenticationToken(signInRequest.getUsername(), signInRequest.getPassword())
@@ -40,6 +44,13 @@ public class UserController {
         JwtResponse response = new JwtResponse(token);
         
         return response;
-
 	}
+
+    @PostMapping({ "/register", "/register/" })
+	public ResponseEntity<User> register(@Valid @RequestBody User user) {
+        User result = userService.save(user);
+        return new ResponseEntity<>(result, HttpStatus.CREATED);
+	}
+    
+
 }
