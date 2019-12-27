@@ -28,13 +28,13 @@ public class PatientService {
   }
     
 
-  public Patient save(Patient Patient) {
-    return patientRepository.insert(Patient);
+  public Patient save(Patient patient) {
+    return patientRepository.insert(patient);
   }
   
   
-  public Patient update(Patient Patient) {
-	  return patientRepository.save(Patient);
+  public Patient update(Patient patient) {
+	  return patientRepository.save(patient);
   }
     
   public void delete(String id) {

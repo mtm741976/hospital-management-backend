@@ -46,6 +46,13 @@ public class PatientController {
     return new ResponseEntity<>(result, HttpStatus.CREATED);
   }
   
+  @PutMapping("/{id}")
+  public ResponseEntity<Patient> updatePatient(@Valid @RequestBody Patient patient, @PathVariable String id) {
+      patient.setId(id);
+      Patient result = patientService.update(patient);
+      return new ResponseEntity<>(result, HttpStatus.OK);
+  }
+
   @DeleteMapping("/{id}")
   public ResponseEntity<Void> deletePatient(@PathVariable String id) {
       patientService.delete(id);

@@ -48,6 +48,13 @@ public class BedController {
     	return new ResponseEntity<>(result, HttpStatus.CREATED);
     }
     
+    @PutMapping("/{id}")
+    public ResponseEntity<Bed> updateBed(@Valid @RequestBody Bed bed, @PathVariable String id) {
+        bed.setId(id);
+        Bed result = bedService.update(bed);
+        return new ResponseEntity<>(result, HttpStatus.OK);
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteBed(@PathVariable String id) {
         bedService.delete(id);

@@ -10,7 +10,7 @@ public class Bed {
 
 	@Id
 	private String id;
-  private String imgUrl;
+	private String imgUrl;
 	private String desc;
 	private Date created_at;
 	
@@ -18,7 +18,8 @@ public class Bed {
 		this.created_at = new Date(System.currentTimeMillis());
 	}
 	
-	private Bed(String imgUrl, String desc) {
+	private Bed(String id, String imgUrl, String desc) {
+		this.id = id;
 		this.imgUrl = imgUrl;
 		this.desc = desc;
 		this.created_at = new Date(System.currentTimeMillis());
