@@ -5,9 +5,7 @@
 
 	<groupId>tn.imed.jaberi</groupId>
 	<artifactId>hospital-management</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>Hospital Management</name>
-	<description>Academic project ..</description>
+	<version>1.0-SNAPSHOT</version>
 	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -16,6 +14,9 @@
 		<relativePath/>
 	</parent>
 	
+	<name>Hospital Management</name>
+	<description> Academic project using JAVA - SpringBoot - MongoDB - Docker and DevOps [ CI : Travis CI / CD: Heroku ] 🚀 .. </description>
+
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
