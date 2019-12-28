@@ -15,7 +15,7 @@
 	</parent>
 	
 	<name>Hospital Management</name>
-	<description> Academic project using SpringBoot JAVA, MongoDB, Docker & DevOps [ CI : Travis CI / CD: Heroku ] 🚀 .. </description>
+	<description> Academic project using JAVA - SpringBoot - MongoDB - Docker and DevOps [ CI : Travis CI / CD: Heroku ] 🚀 .. </description>
 
 	<properties>
 		<java.version>1.8</java.version>
