@@ -1,1 +1,1 @@
-web: java -cp app:app/lib/* tn.imed.jaberi.hospitalmanagement.HospitalManagementApplication
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar ./target/*.jar
