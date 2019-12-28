@@ -26,12 +26,12 @@ jobs:
 ############################################
 
 before_deploy: 
-  - docker build -t dockertunis/hospital-management-springboot -f Dockerfile .
+  - docker build -t 3imedjaberi/hospital-management-rest-api -f Dockerfile .
 
 deploy:
   provider: heroku
   api_key:
     secure: "$HEROKU_API_KEY"
-  app: "test-docker-spring"
+  app: "hospital-management-rest-api"
   on:
     branch: master
