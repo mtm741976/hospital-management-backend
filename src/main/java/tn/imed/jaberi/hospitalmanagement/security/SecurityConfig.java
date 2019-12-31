@@ -14,9 +14,14 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
  
     private final String[] __PUBLIC_ENDPOINTS__ = {
+			"/v2/api-docs", // swagger json data 
+			"/webjars/**",
+			"/swagger-resources/**",
+			"/csrf",
+			"/swagger-ui.html", // swagger ui
 			"/api/",
 			"/api",
-            "/api/auth/**",
+			"/api/auth/**"
     };
     
     @Bean
